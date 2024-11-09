@@ -13,6 +13,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Your Application Name',
       theme: AppThemes.theme,
+      darkTheme: AppThemes.darkTheme,
       initialRoute: AppRoutes.initialRoute,
       onGenerateRoute: AppRoutes.onGenerateRoute,
       builder: (context, child) {
