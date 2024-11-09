@@ -49,7 +49,7 @@ class _NotFoundScreenState extends State<NotFoundScreen> {
                   Navigator.pop(context);
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColorThemes.kPrimaryColor,
+                  backgroundColor: AppColorThemes.kPrimaryColor(context),
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(
                     horizontal: 24,
