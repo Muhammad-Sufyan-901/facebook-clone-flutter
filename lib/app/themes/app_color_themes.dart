@@ -36,7 +36,7 @@ abstract class AppColorThemes {
     primary: kLightPrimaryColor,
     secondary: kLightSecondaryColor,
     tertiary: kLightTertiaryColor,
-    surface: kLightFillColor,
+    surface: kLightBackgroundColor,
     error: kLightErrorColor,
   );
 
@@ -44,7 +44,7 @@ abstract class AppColorThemes {
     primary: kDarkPrimaryColor,
     secondary: kDarkSecondaryColor,
     tertiary: kDarkTertiaryColor,
-    surface: kDarkFillColor,
+    surface: kDarkBackgroundColor,
     error: kDarkErrorColor,
   );
 
