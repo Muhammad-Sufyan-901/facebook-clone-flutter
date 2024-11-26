@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:accessibility_tools/accessibility_tools.dart';
-import 'package:flutter_boilerplate/app/routes/app_routes.dart';
 
+import 'package:flutter_boilerplate/app/routes/app_routes.dart';
 import 'package:flutter_boilerplate/app/themes/app_themes.dart';
 
 class App extends StatelessWidget {
