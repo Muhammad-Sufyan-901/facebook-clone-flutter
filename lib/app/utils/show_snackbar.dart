@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_boilerplate/app/themes/app_color_themes.dart';
+
 abstract class ShowSnackBar {
   static void showSnackBar({
     required BuildContext context,
@@ -8,7 +10,7 @@ abstract class ShowSnackBar {
   }) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        backgroundColor: _getBackgroundColor(variant),
+        backgroundColor: _getBackgroundColor(context, variant),
         content: Text(
           message,
           style: Theme.of(context).textTheme.bodyMedium!.copyWith(
@@ -20,21 +22,22 @@ abstract class ShowSnackBar {
     );
   }
 
-  static Color _getBackgroundColor(SnackBarVariant variant) {
+  static Color _getBackgroundColor(
+      BuildContext context, SnackBarVariant variant) {
     switch (variant) {
       case SnackBarVariant.error:
-        return Colors.red[400]!;
+        return AppColorThemes.kErrorColor(context);
       case SnackBarVariant.warning:
-        return Colors.orange[400]!;
+        return AppColorThemes.kWarningColor(context);
       case SnackBarVariant.success:
-        return Colors.green[400]!;
+        return AppColorThemes.kSuccessColor(context);
       case SnackBarVariant.info:
-        return Colors.cyan[400]!;
+        return AppColorThemes.kTertiaryColor(context);
       case SnackBarVariant.primary:
-        return Colors.blue;
+        return AppColorThemes.kPrimaryColor(context);
       case SnackBarVariant.defaultVariant:
       default:
-        return Colors.blueGrey[400]!;
+        return AppColorThemes.kGreyColor(context);
     }
   }
 

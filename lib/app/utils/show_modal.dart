@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_boilerplate/app/themes/app_color_themes.dart';
+
 abstract class ShowModal {
   static void showModal({
     required BuildContext context,
@@ -16,7 +18,7 @@ abstract class ShowModal {
           title: Text(
             title,
             style: TextStyle(
-              color: _getTitleColor(variant),
+              color: _getTitleColor(context, variant),
             ),
           ),
           content: content,
@@ -26,12 +28,12 @@ abstract class ShowModal {
               child: Text(
                 buttonText ?? 'OK',
                 style: TextStyle(
-                  color: _getButtonColor(variant),
+                  color: _getButtonColor(context, variant),
                 ),
               ),
             ),
           ],
-          backgroundColor: _getBackgroundColor(variant),
+          backgroundColor: _getBackgroundColor(context, variant),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -40,45 +42,45 @@ abstract class ShowModal {
     );
   }
 
-  static Color _getTitleColor(ModalVariant variant) {
+  static Color _getTitleColor(BuildContext context, ModalVariant variant) {
     switch (variant) {
       case ModalVariant.error:
-        return Colors.red;
+        return AppColorThemes.kErrorColor(context);
       case ModalVariant.warning:
-        return Colors.orange;
+        return AppColorThemes.kWarningColor(context);
       case ModalVariant.success:
-        return Colors.green;
+        return AppColorThemes.kSuccessColor(context);
       case ModalVariant.defaultVariant:
       default:
-        return Colors.black;
+        return AppColorThemes.kTextColor(context);
     }
   }
 
-  static Color _getBackgroundColor(ModalVariant variant) {
+  static Color _getBackgroundColor(BuildContext context, ModalVariant variant) {
     switch (variant) {
       case ModalVariant.error:
-        return Colors.red[50]!;
+        return AppColorThemes.kErrorColor(context).withOpacity(0.1);
       case ModalVariant.warning:
-        return Colors.orange[50]!;
+        return AppColorThemes.kWarningColor(context).withOpacity(0.1);
       case ModalVariant.success:
-        return Colors.green[50]!;
+        return AppColorThemes.kSuccessColor(context).withOpacity(0.1);
       case ModalVariant.defaultVariant:
       default:
-        return Colors.white;
+        return AppColorThemes.kBackgroundColor(context);
     }
   }
 
-  static Color _getButtonColor(ModalVariant variant) {
+  static Color _getButtonColor(BuildContext context, ModalVariant variant) {
     switch (variant) {
       case ModalVariant.error:
-        return Colors.red;
+        return AppColorThemes.kErrorColor(context);
       case ModalVariant.warning:
-        return Colors.orange;
+        return AppColorThemes.kWarningColor(context);
       case ModalVariant.success:
-        return Colors.green;
+        return AppColorThemes.kSuccessColor(context);
       case ModalVariant.defaultVariant:
       default:
-        return Colors.blue;
+        return AppColorThemes.kPrimaryColor(context);
     }
   }
 }
