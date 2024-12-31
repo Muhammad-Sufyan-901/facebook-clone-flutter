@@ -15,7 +15,7 @@ Clone the project
 Rename project folder as you want
 
 ```bash
-  mv flutter_boilerplate your_project_name
+  mv flutter-boilerplate your_project_name
 ```
 
 Go to the project directory
