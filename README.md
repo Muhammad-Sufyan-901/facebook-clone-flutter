@@ -62,7 +62,7 @@ Some features we provided on this boilerplate including :
 
 ## Icons
 
-This boilerplate doesn't include external icons. So if you wanna use external icons, we recommend you to use some of icons including :
+This boilerplate using `font awesome` icons as default icons. So if you wanna use other icons, we recommend you to use some of icons including :
 
 Hugeicons
 
