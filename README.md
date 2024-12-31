@@ -76,7 +76,7 @@ Iconoir
   flutter pub add iconoir_flutter
 ```
 
-Font Awesome
+Font Awesome (Doesn't need to install by default because it already installed)
 
 ```bash
   flutter pub add font_awesome_flutter
