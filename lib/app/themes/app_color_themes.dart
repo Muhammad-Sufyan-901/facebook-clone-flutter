@@ -15,6 +15,10 @@ abstract class AppColorThemes {
   static const Color kLightSuccessColor = Color(0xFF00C851);
   static const Color kLightWarningColor = Color(0xFFFFC107);
   static const Color kLightErrorColor = Color(0xFFF44336);
+  static const Color kLightInfoColor = Color(0xFF2196F3);
+  static const Color kLightDisabledColor = Color(0xFFBDBDBD);
+  static const Color kLightDisabledTextColor = Color(0xFF9E9E9E);
+  static const Color kLightDisabledBackgroundColor = Color(0xFFE0E0E0);
 
   // Dark Themed Colors
   static const Color kDarkPrimaryColor = Color(0xFF5AB1FE);
@@ -30,6 +34,10 @@ abstract class AppColorThemes {
   static const Color kDarkSuccessColor = Color(0xFF00C851);
   static const Color kDarkWarningColor = Color(0xFFFFC107);
   static const Color kDarkErrorColor = Color(0xFFF44336);
+  static const Color kDarkInfoColor = Color(0xFF2196F3);
+  static const Color kDarkDisabledColor = Color(0xFFBDBDBD);
+  static const Color kDarkDisabledTextColor = Color(0xFF9E9E9E);
+  static const Color kDarkDisabledBackgroundColor = Color(0xFFE0E0E0);
 
   // Primary Color Scheme
   static const ColorScheme kLightColorScheme = ColorScheme.light(
@@ -128,5 +136,29 @@ abstract class AppColorThemes {
     return Theme.of(context).brightness == Brightness.dark
         ? kDarkErrorColor
         : kLightErrorColor;
+  }
+
+  static Color kInfoColor(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.dark
+        ? kDarkInfoColor
+        : kLightInfoColor;
+  }
+
+  static Color kDisabledColor(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.dark
+        ? kDarkDisabledColor
+        : kLightDisabledColor;
+  }
+
+  static Color kDisabledTextColor(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.dark
+        ? kDarkDisabledTextColor
+        : kLightDisabledTextColor;
+  }
+
+  static Color kDisabledBackgroundColor(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.dark
+        ? kDarkDisabledBackgroundColor
+        : kLightDisabledBackgroundColor;
   }
 }
