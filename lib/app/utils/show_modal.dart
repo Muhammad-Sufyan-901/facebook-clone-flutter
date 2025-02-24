@@ -10,6 +10,9 @@ abstract class ShowModal {
     required Widget content,
     String? buttonText,
     VoidCallback? onPressed,
+    List<Widget>? actions,
+    ModalTitleWeight titleWeight = ModalTitleWeight.regular,
+    double width = 0.85,
   }) {
     showDialog(
       context: context,
@@ -18,22 +21,26 @@ abstract class ShowModal {
           title: Text(
             title,
             style: TextStyle(
-              color: _getTitleColor(context, variant),
-            ),
+                color: _getTitleColor(context, variant),
+                fontWeight: _getTitleWeight(titleWeight)),
           ),
-          content: content,
-          actions: <Widget>[
-            TextButton(
-              onPressed: onPressed ?? () => Navigator.of(context).pop(),
-              child: Text(
-                buttonText ?? 'OK',
-                style: TextStyle(
-                  color: _getButtonColor(context, variant),
+          content: SizedBox(
+            width: MediaQuery.of(context).size.width * width,
+            child: content,
+          ),
+          actions: actions ??
+              <Widget>[
+                TextButton(
+                  onPressed: onPressed ?? () => Navigator.of(context).pop(),
+                  child: Text(
+                    buttonText ?? 'OK',
+                    style: TextStyle(
+                      color: _getButtonColor(context, variant),
+                    ),
+                  ),
                 ),
-              ),
-            ),
-          ],
-          backgroundColor: _getBackgroundColor(context, variant),
+              ],
+          backgroundColor: AppColorThemes.kBackgroundColor(context),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -56,20 +63,6 @@ abstract class ShowModal {
     }
   }
 
-  static Color _getBackgroundColor(BuildContext context, ModalVariant variant) {
-    switch (variant) {
-      case ModalVariant.error:
-        return AppColorThemes.kErrorColor(context).withOpacity(0.1);
-      case ModalVariant.warning:
-        return AppColorThemes.kWarningColor(context).withOpacity(0.1);
-      case ModalVariant.success:
-        return AppColorThemes.kSuccessColor(context).withOpacity(0.1);
-      case ModalVariant.defaultVariant:
-      default:
-        return AppColorThemes.kBackgroundColor(context);
-    }
-  }
-
   static Color _getButtonColor(BuildContext context, ModalVariant variant) {
     switch (variant) {
       case ModalVariant.error:
@@ -83,6 +76,20 @@ abstract class ShowModal {
         return AppColorThemes.kPrimaryColor(context);
     }
   }
+
+  static FontWeight _getTitleWeight(ModalTitleWeight weight) {
+    switch (weight) {
+      case ModalTitleWeight.bold:
+        return FontWeight.bold;
+      case ModalTitleWeight.semiBold:
+        return FontWeight.w600;
+      case ModalTitleWeight.medium:
+        return FontWeight.w500;
+      case ModalTitleWeight.regular:
+      default:
+        return FontWeight.normal;
+    }
+  }
 }
 
 enum ModalVariant {
@@ -90,4 +97,11 @@ enum ModalVariant {
   error,
   warning,
   success,
+}
+
+enum ModalTitleWeight {
+  bold,
+  semiBold,
+  medium,
+  regular,
 }
