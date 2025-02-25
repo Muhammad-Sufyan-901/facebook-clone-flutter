@@ -1,5 +1,6 @@
 abstract class AssetsConstant {
-  static const String flutterLogo = 'assets/images/logo/flutter_logo.png';
+  static const String facebookWhiteLogo =
+      'assets/images/logo/facebook_white_logo.png';
 
   // Add more static assets here
 }
