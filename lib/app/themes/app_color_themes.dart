@@ -2,42 +2,49 @@ import 'package:flutter/material.dart';
 
 abstract class AppColorThemes {
   // Light Themed Colors
-  static const Color kLightPrimaryColor = Color(0xFF5AB1FE);
-  static const Color kLightSecondaryColor = Color(0xFF2850BA);
-  static const Color kLightTertiaryColor = Color(0xFFECE0F6);
-  static const Color kLightAccentColor = Color(0xFFEF4D4B);
-  static const Color kLightFillColor = Color(0xFFdff6fe);
-  static const Color kLightGreyColor = Color(0xFF6D757E);
-  static const Color kLightBackgroundColor = Color(0xFFF8F9FB);
-  static const Color kLightTextColor = Color(0xFF1E2022);
-  static const Color kLightDividerColor = Color(0xFFE5E5E5);
-  static const Color kLightIconColor = Color(0xFF1E2022);
-  static const Color kLightSuccessColor = Color(0xFF00C851);
-  static const Color kLightWarningColor = Color(0xFFFFC107);
-  static const Color kLightErrorColor = Color(0xFFF44336);
-  static const Color kLightInfoColor = Color(0xFF2196F3);
-  static const Color kLightDisabledColor = Color(0xFFBDBDBD);
-  static const Color kLightDisabledTextColor = Color(0xFF9E9E9E);
-  static const Color kLightDisabledBackgroundColor = Color(0xFFE0E0E0);
+  static const Color kLightPrimaryColor = Color.fromARGB(255, 50, 102, 253);
+  static const Color kLightSecondaryColor = Color.fromARGB(255, 40, 80, 186);
+  static const Color kLightTertiaryColor = Color.fromARGB(255, 236, 224, 246);
+  static const Color kLightAccentColor = Color.fromARGB(255, 239, 77, 75);
+  static const Color kLightFillColor = Color.fromARGB(255, 36, 37, 38);
+  static const Color kLightGreyColor = Color.fromARGB(255, 228, 230, 235);
+  static const Color kLightBackgroundColor = Color.fromARGB(255, 4, 4, 4);
+  static const Color kLightCardBackgroundColor =
+      Color.fromARGB(255, 24, 25, 26);
+  static const Color kLightTextColor = Color.fromARGB(255, 255, 255, 255);
+  static const Color kLightDividerColor = Color.fromARGB(255, 176, 179, 184);
+  static const Color kLightIconColor = Color.fromARGB(255, 255, 255, 255);
+  static const Color kLightSuccessColor = Color.fromARGB(255, 0, 200, 81);
+  static const Color kLightWarningColor = Color.fromARGB(255, 255, 193, 7);
+  static const Color kLightErrorColor = Color.fromARGB(255, 221, 35, 52);
+  static const Color kLightInfoColor = Color.fromARGB(255, 88, 162, 246);
+  static const Color kLightDisabledColor = Color.fromARGB(255, 189, 189, 189);
+  static const Color kLightDisabledTextColor =
+      Color.fromARGB(255, 158, 158, 158);
+  static const Color kLightDisabledBackgroundColor =
+      Color.fromARGB(255, 224, 224, 224);
 
   // Dark Themed Colors
-  static const Color kDarkPrimaryColor = Color(0xFF5AB1FE);
-  static const Color kDarkSecondaryColor = Color(0xFF2850BA);
-  static const Color kDarkTertiaryColor = Color(0xFFECE0F6);
-  static const Color kDarkAccentColor = Color(0xFFEF4D4B);
-  static const Color kDarkFillColor = Color(0xFFdff6fe);
-  static const Color kDarkGreyColor = Color(0xFF6D757E);
-  static const Color kDarkBackgroundColor = Color(0xFFF8F9FB);
-  static const Color kDarkTextColor = Color(0xFF1E2022);
-  static const Color kDarkDividerColor = Color(0xFFE5E5E5);
-  static const Color kDarkIconColor = Color(0xFF1E2022);
-  static const Color kDarkSuccessColor = Color(0xFF00C851);
-  static const Color kDarkWarningColor = Color(0xFFFFC107);
-  static const Color kDarkErrorColor = Color(0xFFF44336);
-  static const Color kDarkInfoColor = Color(0xFF2196F3);
-  static const Color kDarkDisabledColor = Color(0xFFBDBDBD);
-  static const Color kDarkDisabledTextColor = Color(0xFF9E9E9E);
-  static const Color kDarkDisabledBackgroundColor = Color(0xFFE0E0E0);
+  static const Color kDarkPrimaryColor = Color.fromARGB(255, 50, 102, 253);
+  static const Color kDarkSecondaryColor = Color.fromARGB(255, 40, 80, 186);
+  static const Color kDarkTertiaryColor = Color.fromARGB(255, 236, 224, 246);
+  static const Color kDarkAccentColor = Color.fromARGB(255, 239, 77, 75);
+  static const Color kDarkFillColor = Color.fromARGB(255, 36, 37, 38);
+  static const Color kDarkGreyColor = Color.fromARGB(255, 228, 230, 235);
+  static const Color kDarkBackgroundColor = Color.fromARGB(255, 4, 4, 4);
+  static const Color kDarkCardBackgroundColor = Color.fromARGB(255, 24, 25, 26);
+  static const Color kDarkTextColor = Color.fromARGB(255, 255, 255, 255);
+  static const Color kDarkDividerColor = Color.fromARGB(255, 176, 179, 184);
+  static const Color kDarkIconColor = Color.fromARGB(255, 255, 255, 255);
+  static const Color kDarkSuccessColor = Color.fromARGB(255, 0, 200, 81);
+  static const Color kDarkWarningColor = Color.fromARGB(255, 255, 193, 7);
+  static const Color kDarkErrorColor = Color.fromARGB(255, 221, 35, 52);
+  static const Color kDarkInfoColor = Color.fromARGB(255, 88, 162, 246);
+  static const Color kDarkDisabledColor = Color.fromARGB(255, 189, 189, 189);
+  static const Color kDarkDisabledTextColor =
+      Color.fromARGB(255, 158, 158, 158);
+  static const Color kDarkDisabledBackgroundColor =
+      Color.fromARGB(255, 224, 224, 224);
 
   // Primary Color Scheme
   static const ColorScheme kLightColorScheme = ColorScheme.light(
@@ -100,6 +107,12 @@ abstract class AppColorThemes {
     return Theme.of(context).brightness == Brightness.dark
         ? kDarkBackgroundColor
         : kLightBackgroundColor;
+  }
+
+  static Color kCardBackgroundColor(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.dark
+        ? kDarkCardBackgroundColor
+        : kLightCardBackgroundColor;
   }
 
   static Color kTextColor(BuildContext context) {
