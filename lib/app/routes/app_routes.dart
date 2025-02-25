@@ -3,12 +3,12 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutter_boilerplate/app/views/screens/initial_screen.dart';
-import 'package:flutter_boilerplate/app/views/screens/not_found_screen.dart';
-import 'package:flutter_boilerplate/app/views/screens/auth/forgot_password_screen.dart';
-import 'package:flutter_boilerplate/app/views/screens/auth/sign_in_screen.dart';
-import 'package:flutter_boilerplate/app/views/screens/auth/sign_up_screen.dart';
-import 'package:flutter_boilerplate/app/views/screens/home/home_screen.dart';
+import 'package:facebook_clone/app/views/screens/initial_screen.dart';
+import 'package:facebook_clone/app/views/screens/not_found_screen.dart';
+import 'package:facebook_clone/app/views/screens/auth/forgot_password_screen.dart';
+import 'package:facebook_clone/app/views/screens/auth/sign_in_screen.dart';
+import 'package:facebook_clone/app/views/screens/auth/sign_up_screen.dart';
+import 'package:facebook_clone/app/views/screens/home/home_screen.dart';
 
 abstract class AppRoutes {
   static const String initialRoute = '/';

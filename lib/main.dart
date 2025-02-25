@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:flutter_boilerplate/app/app.dart';
+import 'package:facebook_clone/app/app.dart';
 
 class MainHttpOverrides extends HttpOverrides {
   @override

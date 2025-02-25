@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_boilerplate/app/themes/app_color_themes.dart';
-import 'package:flutter_boilerplate/app/themes/app_text_themes.dart';
+import 'package:facebook_clone/app/themes/app_color_themes.dart';
+import 'package:facebook_clone/app/themes/app_text_themes.dart';
 
 abstract class AppThemes {
   static ThemeData get theme {

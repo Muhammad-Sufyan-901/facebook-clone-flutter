@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:flutter_boilerplate/app/utils/input_validator.dart';
-import 'package:flutter_boilerplate/app/themes/app_color_themes.dart';
+import 'package:facebook_clone/app/utils/input_validator.dart';
+import 'package:facebook_clone/app/themes/app_color_themes.dart';
 
 class RoundedPasswordInputField extends StatefulWidget {
   const RoundedPasswordInputField({

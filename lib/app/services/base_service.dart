@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-import 'package:flutter_boilerplate/app/constants/environment_constant.dart';
+import 'package:facebook_clone/app/constants/environment_constant.dart';
 
 class BaseService {
   final String baseUrl = EnvironmentConstant.apiBaseURL;

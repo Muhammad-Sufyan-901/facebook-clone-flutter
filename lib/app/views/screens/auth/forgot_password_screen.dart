@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_boilerplate/app/routes/app_routes.dart';
-import 'package:flutter_boilerplate/app/views/layouts/main_layout.dart';
+import 'package:facebook_clone/app/routes/app_routes.dart';
+import 'package:facebook_clone/app/views/layouts/main_layout.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   const ForgotPasswordScreen({super.key});

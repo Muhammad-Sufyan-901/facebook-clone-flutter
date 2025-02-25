@@ -3,9 +3,9 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 
-import 'package:flutter_boilerplate/app/configs/cache_manager.dart';
-import 'package:flutter_boilerplate/app/configs/http_client.dart';
-import 'package:flutter_boilerplate/app/constants/environment_constant.dart';
+import 'package:facebook_clone/app/configs/cache_manager.dart';
+import 'package:facebook_clone/app/configs/http_client.dart';
+import 'package:facebook_clone/app/constants/environment_constant.dart';
 
 class AuthenticationMiddleware extends StatelessWidget {
   AuthenticationMiddleware({

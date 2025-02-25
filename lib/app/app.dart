@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:accessibility_tools/accessibility_tools.dart';
 
-import 'package:flutter_boilerplate/app/routes/app_routes.dart';
-import 'package:flutter_boilerplate/app/themes/app_themes.dart';
+import 'package:facebook_clone/app/routes/app_routes.dart';
+import 'package:facebook_clone/app/themes/app_themes.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/app/views/layouts/main_layout.dart';
+import 'package:facebook_clone/app/views/layouts/main_layout.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
