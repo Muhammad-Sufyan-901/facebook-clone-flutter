@@ -3,6 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 abstract class AppTextThemes {
   static TextTheme get textTheme {
-    return GoogleFonts.poppinsTextTheme();
+    return GoogleFonts.robotoTextTheme();
   }
 }
