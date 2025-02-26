@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:facebook_clone/app/themes/app_color_themes.dart';
+
 class RoundedPrimaryFilledButton extends StatelessWidget {
   const RoundedPrimaryFilledButton({
     super.key,
@@ -30,7 +32,7 @@ class RoundedPrimaryFilledButton extends StatelessWidget {
         label,
         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
               fontWeight: FontWeight.w600,
-              color: Theme.of(context).colorScheme.onPrimary,
+              color: AppColorThemes.kTextColor(context),
             ),
       ),
     );
