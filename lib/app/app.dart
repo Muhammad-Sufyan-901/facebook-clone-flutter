@@ -15,7 +15,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.dark,
       theme: AppThemes.theme,
       darkTheme: AppThemes.darkTheme,
-      initialRoute: AppRoutes.initialRoute,
+      initialRoute: AppRoutes.homeRoute,
       onGenerateRoute: AppRoutes.onGenerateRoute,
       builder: (context, child) {
         return AccessibilityTools(
